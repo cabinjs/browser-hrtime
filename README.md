@@ -26,7 +26,7 @@ process.hrtime = require('browser-hrtime');
 const someModule = require('module-that-uses-hrtime');
 ```
 
-## EMS & Typescript
+## ESM & Typescript
 ```
 import hrtime from 'browser-hrtime';
 
