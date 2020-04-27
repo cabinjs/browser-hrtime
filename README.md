@@ -5,7 +5,7 @@ browser support for `process.hrtime()`.
 # Usage
 ## NodeJS
 ```
-const { hrtime } = require('browser-hrtime');
+const hrtime = require('browser-hrtime');
 
 const NS_PER_SEC = 1e9;
 const time = hrtime();
