@@ -4,11 +4,9 @@
   "description": "use process.hrtime() in the browser",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
-  "browser": "lib/umd/index.js",
   "scripts": {
     "test": "jest --collectCoverage=true",
-    "build": "npm run build:es2015 && npm run build:esm && npm run build:cjs && npm run build:umd && npm run build:umd:min",
-    "build:es2015": "tsc --module es2015 --target es2015 --outDir lib/es2015",
+    "build": "npm run build:esm && npm run build:cjs && npm run build:umd && npm run build:umd:min",
     "build:esm": "tsc --module es2015 --target es5 --outDir lib/esm",
     "build:cjs": "tsc --module commonjs --target es5 --outDir lib/cjs",
     "build:umd": "rollup -c",
@@ -56,5 +54,6 @@
     "github": {
       "release": true
     }
-  }
+  },
+  "dependencies": {}
 }

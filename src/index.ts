@@ -1,6 +1,8 @@
 type HrTime = [number, number];
 
-export function hrtime(previousTimestamp?: HrTime):HrTime {
+const NS_PER_SEC: number = 1e9;
+
+const hrtime = (previousTimestamp?: HrTime):HrTime => {
   const baseNow = Math.floor((Date.now() - performance.now()) * 1e-3);
   let clocktime = performance.now() * 1e-3;
   let seconds = Math.floor(clocktime) + baseNow;
@@ -16,8 +18,14 @@ export function hrtime(previousTimestamp?: HrTime):HrTime {
   }
   return [seconds, nanoseconds];
 }
-const main = typeof process !== "undefined" && typeof process.hrtime !== "undefined"
-  ? process.hrtime
-  : hrtime;
+hrtime.bigint = (time?: HrTime) => {
+    const diff = hrtime(time);
+    return ((diff[0] * NS_PER_SEC + diff[1]) as unknown) as bigint;
+};
+if(!(typeof process !== "undefined" && typeof process.hrtime !== "undefined")){
+  window.process = <any>{};
+  global.process.hrtime = hrtime;
+}
 
-export default main;
+module.exports = process.hrtime;
+export default process.hrtime;
