@@ -22,7 +22,10 @@
   },
   "keywords": [
     "hrtime",
-    "process"
+    "process",
+    "perfomance",
+    "angular",
+    "node"
   ],
   "author": "Vlad Tansky",
   "license": "MIT",
