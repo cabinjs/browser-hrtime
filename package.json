@@ -2,12 +2,19 @@
   "name": "browser-hrtime",
   "version": "1.0.0",
   "description": "use process.hrtime() in the browser",
-  "main": "index.js",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "browser": "dist/index.umd.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
     "lint": "eslint index.js",
     "format": "prettier --write \"index.js\"",
-    "release": "dotenv release-it"
+    "release": "dotenv release-it",
+    "test": "karma start --coverage",
+    "test:watch": "karma start --auto-watch=true --single-run=false",
+    "test:update-snapshots": "karma start --update-snapshots",
+    "test:prune-snapshots": "karma start --prune-snapshots"
   },
   "repository": {
     "type": "git",
@@ -24,10 +31,18 @@
   },
   "homepage": "https://github.com/vltansky/browser-hrtime#readme",
   "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@rollup/plugin-commonjs": "^11.0.1",
+    "@rollup/plugin-node-resolve": "^7.0.0",
     "eslint": "^6.8.0",
+    "karma": "^5.0.2",
     "prettier": "^2.0.5",
-    "release-it": "^13.5.5"
+    "release-it": "^13.5.5",
+    "rollup": "^1.29.0"
   },
+  "files": [
+    "dist"
+  ],
   "release-it": {
     "github": {
       "release": true
