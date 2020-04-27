@@ -1,4 +1,6 @@
-function hrtime(previousTimestamp) {
+type HrTime = [number, number];
+
+export function hrtime(previousTimestamp?: HrTime):HrTime {
   const baseNow = Math.floor((Date.now() - performance.now()) * 1e-3);
   let clocktime = performance.now() * 1e-3;
   let seconds = Math.floor(clocktime) + baseNow;
@@ -14,9 +16,8 @@ function hrtime(previousTimestamp) {
   }
   return [seconds, nanoseconds];
 }
-
-var main = typeof process !== "undefined" && typeof process.hrtime !== "undefined"
-    ? process.hrtime
-    : hrtime;
+const main = typeof process !== "undefined" && typeof process.hrtime !== "undefined"
+  ? process.hrtime
+  : hrtime;
 
 export default main;

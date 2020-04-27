@@ -6,16 +6,17 @@
   "module": "lib/index.esm.js",
   "browser": "lib/index.umd.js",
   "scripts": {
-    "build": "rollup -c && npm run ts",
-    "ts": "cp src/main.ts lib/index.cjs.d.ts && cp src/main.ts lib/index.esm.d.ts && cp src/main.ts lib/index.umd.d.ts",
-    "dev": "rollup -c -w",
-    "lint": "eslint index.js",
-    "format": "prettier --write \"index.js\"",
-    "release": "dotenv release-it",
-    "test": "karma start --coverage",
-    "test:watch": "karma start --auto-watch=true --single-run=false",
-    "test:update-snapshots": "karma start --update-snapshots",
-    "test:prune-snapshots": "karma start --prune-snapshots"
+    "test": "jest --collectCoverage=true",
+    "build": "npm run build:es2015 && npm run build:esm && npm run build:cjs && npm run build:umd && npm run build:umd:min",
+    "build:es2015": "tsc --module es2015 --target es2015 --outDir lib/es2015",
+    "build:esm": "tsc --module es2015 --target es5 --outDir lib/esm",
+    "build:cjs": "tsc --module commonjs --target es5 --outDir lib/cjs",
+    "build:umd": "rollup -c",
+    "build:umd:min": "cd lib/umd && terser --compress --mangle --comments -o index.js -- index.js",
+    "watch": "tsc --watch",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.ts\"",
+    "lint": "tslint -p tsconfig.json",
+    "release": "dotenv release-it"
   },
   "repository": {
     "type": "git",
@@ -35,14 +36,18 @@
   },
   "homepage": "https://github.com/vltansky/browser-hrtime#readme",
   "devDependencies": {
-    "@babel/core": "^7.9.0",
-    "@rollup/plugin-commonjs": "^11.0.1",
-    "@rollup/plugin-node-resolve": "^7.0.0",
-    "eslint": "^6.8.0",
-    "karma": "^5.0.2",
-    "prettier": "^2.0.5",
+    "@types/node": "^13.13.0",
+    "coveralls": "^3.1.0",
+    "dotenv-cli": "^3.1.0",
+    "jest": "^25.4.0",
+    "prettier": "^2.0.4",
     "release-it": "^13.5.5",
-    "rollup": "^1.29.0"
+    "rollup": "^2.7.2",
+    "terser": "^4.6.12",
+    "ts-jest": "^25.4.0",
+    "tslint": "^6.1.1",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.8.3"
   },
   "files": [
     "lib"
