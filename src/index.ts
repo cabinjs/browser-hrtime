@@ -24,8 +24,9 @@ hrtime.bigint = (time?: HrTime) => {
 };
 if(!(typeof process !== "undefined" && typeof process.hrtime !== "undefined")){
   window.process = <any>{};
-  global.process.hrtime = hrtime;
+  window.process.hrtime = hrtime;
 }
-
-module.exports = process.hrtime;
+if(typeof exports === 'object' && typeof module !== 'undefined'){
+  module.exports = process.hrtime;
+}
 export default process.hrtime;
