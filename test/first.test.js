@@ -1,4 +1,4 @@
-import hrtime from '../dist/index.esm';
+import hrtime from '../lib/index.esm';
 
 describe('hrtime()', () => {
     // it('should use browser and return around ~1000000552 nanoseconds', () => {
