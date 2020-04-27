@@ -1,6 +1,5 @@
-const baseNow = Math.floor((Date.now() - performance.now()) * 1e-3);
 function hrtime(previousTimestamp) {
-    console.error('vlad');
+  const baseNow = Math.floor((Date.now() - performance.now()) * 1e-3);
   let clocktime = performance.now() * 1e-3;
   let seconds = Math.floor(clocktime) + baseNow;
   let nanoseconds = Math.floor((clocktime % 1) * 1e9);
