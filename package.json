@@ -2,9 +2,9 @@
   "name": "browser-hrtime",
   "version": "1.0.0",
   "description": "use process.hrtime() in the browser",
-  "main": "lib/index.cjs.js",
-  "module": "lib/index.esm.js",
-  "browser": "lib/index.umd.js",
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
+  "browser": "lib/umd/index.js",
   "scripts": {
     "test": "jest --collectCoverage=true",
     "build": "npm run build:es2015 && npm run build:esm && npm run build:cjs && npm run build:umd && npm run build:umd:min",
