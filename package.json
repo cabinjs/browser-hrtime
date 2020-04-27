@@ -14,6 +14,7 @@
     "watch": "tsc --watch",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.ts\"",
     "lint": "tslint -p tsconfig.json",
+    "prerelease": "npm run build",
     "release": "dotenv release-it"
   },
   "repository": {
