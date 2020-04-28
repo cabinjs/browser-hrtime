@@ -24,12 +24,6 @@ setTimeout(() => {
 }, 1000);
 ```
 
-You can monkey-patch process.hrtime for your dependency graph like this:
-```
-process.hrtime = require('browser-hrtime');
-const someModule = require('module-that-uses-hrtime');
-```
-
 ## ESM & Typescript
 ```
 import hrtime from 'browser-hrtime';
