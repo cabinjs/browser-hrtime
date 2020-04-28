@@ -1,5 +1,9 @@
 # browser-hrtime
 browser support for `process.hrtime()`.
+
+[![Build Status](https://travis-ci.com/vltansky/browser-hrtime.svg?branch=master)](https://travis-ci.com/vltansky/browser-hrtime)
+[![Coverage Status](https://coveralls.io/repos/github/vltansky/browser-hrtime/badge.svg?branch=master)](https://coveralls.io/github/vltansky/browser-hrtime?branch=master)
+
 # Install
 `npm i browser-hrtime`
 # Usage
