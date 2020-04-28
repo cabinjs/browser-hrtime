@@ -6,6 +6,7 @@
   "module": "lib/esm/index.js",
   "scripts": {
     "test": "jest && nyc report --reporter=html",
+    "coverall": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
     "build": "npm run build:esm && npm run build:cjs && npm run build:umd && npm run build:umd:min",
     "build:esm": "tsc --module es2015 --target es5 --outDir lib/esm",
     "build:cjs": "tsc --module commonjs --target es5 --outDir lib/cjs",

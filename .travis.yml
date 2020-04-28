@@ -8,3 +8,5 @@ matrix:
   allow_failures:
     - node_js: '8'
     - node_js: '9'
+after_success:
+  - 'npm run coverall'
