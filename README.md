@@ -63,7 +63,7 @@ setTimeout(() => {
 <html>
 
 <head>
-    <script crossorigin src="https://unpkg.com/browser-hrtime/lib/umd/index.js"></script>
+    <script crossorigin src="https://unpkg.com/browser-hrtime/lib/umd/index.min.js"></script>
     <script>
         const first = process.hrtime();
         console.log(first);
