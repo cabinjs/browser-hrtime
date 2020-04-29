@@ -28,8 +28,4 @@ if(typeof process === "undefined"){
 if(typeof process.hrtime === "undefined"){
   window.process.hrtime = hrtime;
 }
-if(typeof exports === 'object' && typeof module !== 'undefined'){
-  module.exports = process.hrtime;
-  module.exports.default = process.hrtime;
-}
 export default process.hrtime;
