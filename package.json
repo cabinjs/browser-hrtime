@@ -4,7 +4,7 @@
   "description": "use process.hrtime() in the browser",
   "main": "lib/index.js",
   "module": "lib/index.es.js",
-  "browser": "lib/index.bundle.js",
+  "browser": "lib/index.es.js",
   "scripts": {
     "test": "jest && nyc report --reporter=lcov",
     "build": "rollup -c && tsc",

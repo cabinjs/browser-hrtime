@@ -1,4 +1,3 @@
-// import hrtime from '../lib/esm/index';
 const pti = require('puppeteer-to-istanbul')
 const puppeteer = require('puppeteer');
 const path = require('path');

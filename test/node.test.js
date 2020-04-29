@@ -1,4 +1,4 @@
-const hrtime = require('../lib/esm/index');
+import hrtime from '../lib';
 function wait(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }

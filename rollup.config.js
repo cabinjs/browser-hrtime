@@ -21,24 +21,29 @@ export default {
 		{
 			file: pkg.main,
 			format: 'umd',
-			name: 'hrtime'
+            name: 'hrtime',
+		},
+		{
+			file: 'lib/hrtime.min.js',
+			format: 'umd',
+            name: 'hrtime',
+            plugins: [terser()]
 		},
 		{
 			file: pkg.module,
-			format: 'es'
+			format: 'es',
 		},
-		{
-			file: pkg.browser,
-			format: 'es'
-		}
+		// {
+		// 	file: pkg.browser,
+		// 	format: 'es'
+		// },
 	],
 	external: [
 		...Object.keys(pkg.dependencies || {})
 	],
-	plugins: [
-		typescript({
-			typescript: require('typescript'),
-		}),
-		terser()
-	]
+    plugins: [
+        typescript({
+            typescript: require('typescript'),
+        }),
+    ]
 };
