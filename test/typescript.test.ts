@@ -1,6 +1,6 @@
-import * as hrtime from '../lib';
+import hrtime from '../lib';
 describe('TypeScript NodeJS', () => {
-    
+
     test('hrtime() should be function', async () => {
         expect(typeof hrtime).not.toBe('undefined');
     });

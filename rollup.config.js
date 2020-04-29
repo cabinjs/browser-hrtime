@@ -1,11 +1,10 @@
 import pkg from './package.json';
 import {terser} from "rollup-plugin-terser";
-
-// delete old typings to avoid issues
-// require('fs').unlink('dist/index.d.ts', (err) => {});
+import typescript from 'rollup-plugin-typescript2';
+const libraryName = 'browser-detect';
 
 export default {
-	input: 'src/index.js',
+	input: 'src/index.ts',
 	output: [
 		{
 			file: pkg.main,
@@ -13,23 +12,30 @@ export default {
             name: 'hrtime',
 		},
 		{
+			file: pkg.module,
+			format: 'es',
+		},
+		{
 			file: 'lib/hrtime.min.js',
 			format: 'umd',
             name: 'hrtime',
             plugins: [terser()]
 		},
-		// {
-		// 	file: pkg.module,
-		// 	format: 'es',
-		// },
-		// {
-		// 	file: pkg.browser,
-		// 	format: 'es'
-		// },
 	],
+    watch: {
+        include: 'src/**',
+    },
 	external: [
-		...Object.keys(pkg.dependencies || {})
+		// ...Object.keys(pkg.dependencies || {})
 	],
     plugins: [
+        typescript({
+            tsconfigOverride: {
+                compilerOptions: {
+                    module: 'es2015'
+                }
+            },
+            useTsconfigDeclarationDir: true
+        }),
     ]
 };

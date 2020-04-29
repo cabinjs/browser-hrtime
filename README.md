@@ -34,10 +34,12 @@ setTimeout(() => {
 }, 1000);
 ```
 
-## Typescript & ECMAScript
+Typescript: `"esModuleInterop": true`
+
+## ECMAScript
 
 ```
-import * as hrtime from 'browser-hrtime';
+import hrtime from 'browser-hrtime';
 
 const NS_PER_SEC = 1e9;
 const time = hrtime();
@@ -70,6 +72,17 @@ setTimeout(() => {
 ### usage as an Angular polyfill:
 add to `src/polyfills.ts`:
 `import 'browser-hrtime';`
+
+*You should add @types/node to your Angular app*
+`npm i -S @types/node`
+Then in `tsconfig.json`
+```
+"angularCompilerOptions": {
+    "types" : ["node"]
+    ....
+}
+```
+
 ## Use in browser
 ```
 <!DOCTYPE html>

@@ -1,4 +1,4 @@
-const hrtime = (previousTimestamp) => {
+const hrtime = (previousTimestamp?: [number, number]) => {
   const baseNow = Math.floor((Date.now() - performance.now()) * 1e-3);
   let clocktime = performance.now() * 1e-3;
   let seconds = Math.floor(clocktime) + baseNow;
@@ -14,15 +14,15 @@ const hrtime = (previousTimestamp) => {
   }
   return [seconds, nanoseconds];
 };
-// const NS_PER_SEC: number = 1e9;
-// hrtime.bigint = (time?: HrTime) => {
-//   const diff = hrtime(time);
-//   return ((diff[0] * NS_PER_SEC + diff[1]) as unknown) as bigint;
-// };
+const NS_PER_SEC: number = 1e9;
+hrtime.bigint = (time?: [number, number]) => {
+  const diff = hrtime(time);
+  return ((diff[0] * NS_PER_SEC + diff[1]) as unknown) as bigint;
+};
 if (typeof process === 'undefined') {
-  window.process = {};
+  window.process = <any>{};
 }
 if (typeof process.hrtime === 'undefined') {
-  window.process.hrtime = hrtime;
+  window.process.hrtime = <any>hrtime;
 }
 export default process.hrtime;
