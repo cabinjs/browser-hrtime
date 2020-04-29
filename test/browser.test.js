@@ -16,32 +16,30 @@ describe('browser', () => {
     await page.coverage.startJSCoverage();
     await open_page(page, 'umd');
   });
-  // beforeEach(async () => {
-    // page.on('console', msg => console.log('PAGE LOG:', msg));
+  // describe('process.hrtime.bigint()', () => {
+  //   test('process.hrtime.bigint() should be a function', async () => {
+  //     const hrtimeType = await page.evaluate(() => {
+  //       return typeof process.hrtime.bigint;
+  //     });
+  //     expect(hrtimeType).toBe('function');
+  //   }, timeout);
+
+  //   test('global var hrtime.bigint() should be a function', async () => {
+  //     const hrtimeType = await page.evaluate(() => {
+  //       return typeof hrtime.bigint;
+  //     });
+  //     expect(hrtimeType).toBe('function');
+  //   }, timeout);
+
+  //   test('process.hrtime.bigint() should return number', async () => {
+  //     const result = await page.evaluate(() => {
+  //       var time = process.hrtime.bigint(); // e.g [ 1800216, 25 ]
+  //       return time;
+  //     });
+  //   expect(result).toBeGreaterThanOrEqual(0);
+  // }, timeout);
   // });
-  describe('process.hrtime.bigint()', () => {
-    test('process.hrtime.bigint() should be a function', async () => {
-      const hrtimeType = await page.evaluate(() => {
-        return typeof process.hrtime.bigint;
-      });
-      expect(hrtimeType).toBe('function');
-    }, timeout);
 
-    test('global var hrtime.bigint() should be a function', async () => {
-      const hrtimeType = await page.evaluate(() => {
-        return typeof hrtime.bigint;
-      });
-      expect(hrtimeType).toBe('function');
-    }, timeout);
-
-    test('process.hrtime.bigint() should return number', async () => {
-      const result = await page.evaluate(() => {
-        var time = process.hrtime.bigint(); // e.g [ 1800216, 25 ]
-        return time;
-      });
-    expect(result).toBeGreaterThanOrEqual(0);
-  }, timeout);
-  });
   describe('process.hrtime()', () => {
     test('process.hrtime() should be a function', async () => {
       const hrtimeType = await page.evaluate(() => {

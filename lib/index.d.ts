@@ -1,3 +1,7 @@
-/// <reference types="node" />
-declare const _default: NodeJS.HRTime;
-export default _default;
+export declare type HRTime = [number, number];
+declare global {
+    namespace process{
+        function hrtime(previousTimestamp?: [HRTime] | undefined): HRTime;
+    }
+}
+export default hrtime;

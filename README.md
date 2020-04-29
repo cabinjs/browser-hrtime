@@ -24,9 +24,9 @@ setTimeout(() => {
 }, 1000);
 ```
 
-## ESM & Typescript
+## Typescript & ECMAScript 
 ```
-import hrtime from 'browser-hrtime';
+import * as hrtime from 'browser-hrtime';
 
 const NS_PER_SEC = 1e9;
 const time = hrtime();
@@ -55,6 +55,9 @@ setTimeout(() => {
   // Benchmark took 1000000552 nanoseconds
 }, 1000);
 ```
+### usage as an Angular polyfill:
+add to `src/polyfills.ts`:
+`import 'browser-hrtime';`
 # UMD
 ```
 <!DOCTYPE html>

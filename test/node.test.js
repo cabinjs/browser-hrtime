@@ -1,4 +1,4 @@
-import hrtime from '../lib';
+const hrtime = require("../lib");
 function wait(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
