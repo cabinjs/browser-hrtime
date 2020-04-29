@@ -40,6 +40,7 @@ setTimeout(() => {
   // Benchmark took 1000000552 nanoseconds
 }, 1000);
 ```
+
 or you can use as polyfill:
 ```
 import 'browser-hrtime';
@@ -58,14 +59,15 @@ setTimeout(() => {
 ### usage as an Angular polyfill:
 add to `src/polyfills.ts`:
 `import 'browser-hrtime';`
-# UMD
+# Use in browser
 ```
 <!DOCTYPE html>
 <html>
 
 <head>
-    <script crossorigin src="https://unpkg.com/browser-hrtime/lib/umd/index.min.js"></script>
+    <script crossorigin src="https://unpkg.com/browser-hrtime/lib/umd/hrtime.min.js"></script>
     <script>
+        console.log(hrtime());
         const first = process.hrtime();
         console.log(first);
         console.log(process.hrtime(first));
