@@ -26,8 +26,7 @@ setTimeout(() => {
 
 ## ESM & Typescript
 ```
-import * as hrtime from 'browser-hrtime';
-// if typescripts "esModuleInterop": true => import hrtime from 'browser-hrtime'; 
+import hrtime from 'browser-hrtime';
 
 const NS_PER_SEC = 1e9;
 const time = hrtime();
