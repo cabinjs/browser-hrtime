@@ -1,8 +1,8 @@
-const hrtime = require("../lib");
-describe('NodeJS', () => {
-  
+import * as hrtime from '../lib';
+describe('TypeScript NodeJS', () => {
+    
     test('hrtime() should be function', async () => {
-      expect(typeof hrtime).not.toBe('undefined');
+        expect(typeof hrtime).not.toBe('undefined');
     });
 
     test('process should be defined', async () => {

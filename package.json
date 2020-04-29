@@ -30,6 +30,7 @@
   },
   "homepage": "https://github.com/vltansky/browser-hrtime#readme",
   "devDependencies": {
+    "@types/jest": "^25.2.1",
     "@types/node": "^13.13.0",
     "coveralls": "^3.1.0",
     "dotenv-cli": "^3.1.0",
@@ -45,7 +46,8 @@
     "terser": "^4.6.12",
     "ts-jest": "^25.4.0",
     "tslint": "^6.1.1",
-    "tslint-config-prettier": "^1.18.0"
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.8.3"
   },
   "files": [
     "lib"
