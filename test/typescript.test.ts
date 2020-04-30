@@ -1,4 +1,4 @@
-import hrtime from '../lib';
+import * as hrtime from '../lib/hrtime';
 describe('TypeScript NodeJS', () => {
 
     test('hrtime() should be function', async () => {

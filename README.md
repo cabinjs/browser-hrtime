@@ -41,12 +41,16 @@ setTimeout(() => {
   console.log(`Benchmark took ${diff[0] * require + diff[1]} nanoseconds`);// Benchmark took 1000000552 nanoseconds
 }, 1000);
 ```
-If you are using TypeScript you should add to `tsconfig.json` `"esModuleInterop": true`
+### TypeScript
+Add `"esModuleInterop": true` to `tsconfig.json` or use: 
+```js
+import hrtime = require('browser-hrtime');
+```
 
 ## Web with module
 
 ```js
-import hrtime from 'browser-hrtime';
+import * as hrtime from 'browser-hrtime';
 
 const time = hrtime();// [ 1800216, 25 ]
 setTimeout(() => {
@@ -85,9 +89,9 @@ Then in `tsconfig.json`
 ## Web
 
 ```html
-<script src="node_modules/browser-hrtime/lib/hrtime.min.js"></script>
+<script src="node_modules/browser-hrtime/lib/hrtime.js"></script>
 <!-- Or from CDN: -->
-<!-- <script crossorigin src="https://unpkg.com/browser-hrtime/lib/hrtime.min.js"></script> -->
+<!-- <script crossorigin src="https://unpkg.com/browser-hrtime/lib/hrtime.js"></script> -->
 ```
 ```javascript
     console.log(hrtime());

@@ -9,15 +9,6 @@ export default {
 			file: pkg.main,
 			format: 'umd',
             name: 'hrtime',
-		},
-		{
-			file: pkg.module,
-			format: 'es',
-		},
-		{
-			file: 'lib/hrtime.min.js',
-			format: 'umd',
-            name: 'hrtime',
             plugins: [terser()]
 		},
 	],
@@ -28,13 +19,6 @@ export default {
 		// ...Object.keys(pkg.dependencies || {})
 	],
     plugins: [
-        typescript({
-            tsconfigOverride: {
-                compilerOptions: {
-                    module: 'es2015'
-                }
-            },
-            useTsconfigDeclarationDir: true
-        }),
+        typescript(),
     ]
 };

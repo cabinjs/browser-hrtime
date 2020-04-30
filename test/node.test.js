@@ -1,4 +1,4 @@
-const hrtime = require("../lib");
+const hrtime = require("../lib/hrtime");
 describe('NodeJS', () => {
   
     test('hrtime() should be function', async () => {
