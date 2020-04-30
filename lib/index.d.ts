@@ -1,5 +1,5 @@
 declare let hrtime: {
-    (previousTimestamp?: [number, number]): number[];
+    (previousTimestamp?: [number, number]): [number, number];
     bigint(time?: [number, number]): bigint;
 };
 export default hrtime;

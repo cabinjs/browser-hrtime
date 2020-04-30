@@ -1,4 +1,4 @@
-const _hrtime = (previousTimestamp?: [number, number]) => {
+const _hrtime = (previousTimestamp?: [number, number]):[number, number] => {
   const baseNow = Math.floor((Date.now() - performance.now()) * 1e-3);
   let clocktime = performance.now() * 1e-3;
   let seconds = Math.floor(clocktime) + baseNow;
@@ -15,7 +15,7 @@ const _hrtime = (previousTimestamp?: [number, number]) => {
   return [seconds, nanoseconds];
 };
 const NS_PER_SEC: number = 1e9;
-_hrtime.bigint = (time?: [number, number]) => {
+_hrtime.bigint = (time?: [number, number]):bigint => {
   const diff = _hrtime(time);
   return ((diff[0] * NS_PER_SEC + diff[1]) as unknown) as bigint;
 };
