@@ -10,13 +10,13 @@ browser support for `process.hrtime()`.
 #### npm
 
 ```bash
-$ npm install browser-detect
+$ npm install browser-hrtime
 ```
 
 #### yarn
 
 ```bash
-$ yarn add browser-detect
+$ yarn add browser-hrtime
 ```
 
 ## :page_with_curl: Example
