@@ -1,3 +1,5 @@
-/// <reference types="node" />
-declare const _default: NodeJS.HRTime;
-export default _default;
+declare let hrtime: {
+    (previousTimestamp?: [number, number]): number[];
+    bigint(time?: [number, number]): bigint;
+};
+export default hrtime;
