@@ -3,6 +3,7 @@ browser support for `process.hrtime()`.
 
 [![Build Status](https://travis-ci.com/vltansky/browser-hrtime.svg?branch=master)](https://travis-ci.com/vltansky/browser-hrtime)
 [![Coverage Status](https://coveralls.io/repos/github/vltansky/browser-hrtime/badge.svg?branch=master)](https://coveralls.io/github/vltansky/browser-hrtime?branch=master)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fvltansky%2Fbrowser-hrtime.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fvltansky%2Fbrowser-hrtime?ref=badge_shield)
 
 # Install
 `npm i browser-hrtime`
@@ -105,3 +106,7 @@ Then in `tsconfig.json`
 ```
 
 see [NodeJS documenation](https://nodejs.org/api/process.html#process_process_hrtime_time) for more examples
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fvltansky%2Fbrowser-hrtime.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fvltansky%2Fbrowser-hrtime?ref=badge_large)
