@@ -3,6 +3,7 @@ browser support for `process.hrtime()`.
 
 [![Build Status](https://travis-ci.com/vltansky/browser-hrtime.svg?branch=master)](https://travis-ci.com/vltansky/browser-hrtime)
 [![Coverage Status](https://coveralls.io/repos/github/vltansky/browser-hrtime/badge.svg?branch=master)](https://coveralls.io/github/vltansky/browser-hrtime?branch=master)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fvltansky%2Fbrowser-hrtime.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fvltansky%2Fbrowser-hrtime?ref=badge_shield)
 
 ## :package: Installation
 
@@ -125,6 +126,7 @@ $ npm run build
 ```bash
 $ npm run test
 ```
-
+=======
 ## :mag_right: License
-browser-hrtime licensed under a [MIT License](./LICENSE).
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fvltansky%2Fbrowser-hrtime.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fvltansky%2Fbrowser-hrtime?ref=badge_large)
+
