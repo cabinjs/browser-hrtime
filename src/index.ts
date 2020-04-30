@@ -22,8 +22,4 @@ _hrtime.bigint = (time?: [number, number]):bigint => {
 if (typeof process === 'undefined') {
   window.process = <any>{};
 }
-let hrtime = _hrtime;
-if (typeof process.hrtime === 'undefined') {
-  hrtime = window.process.hrtime = <any>_hrtime;
-}
-export default hrtime;
+export default typeof process.hrtime === 'undefined' ? window.process.hrtime = _hrtime : process.hrtime;
