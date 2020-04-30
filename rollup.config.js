@@ -1,7 +1,6 @@
 import pkg from './package.json';
 import {terser} from "rollup-plugin-terser";
 import typescript from 'rollup-plugin-typescript2';
-const libraryName = 'browser-detect';
 
 export default {
 	input: 'src/index.ts',

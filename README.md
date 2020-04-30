@@ -10,7 +10,7 @@ browser support for `process.hrtime()`.
 
 ## NodeJS
 ### As a polyfill
-```
+```js
 require('browser-hrtime');
 
 const NS_PER_SEC = 1e9;
@@ -22,7 +22,7 @@ setTimeout(() => {
 }, 1000);
 ```
 ### As a function
-```
+```js
 const hrtime = require('browser-hrtime');//if your code will 
 
 const NS_PER_SEC = 1e9;
@@ -38,7 +38,7 @@ Typescript: `"esModuleInterop": true`
 
 ## ECMAScript
 
-```
+```js
 import hrtime from 'browser-hrtime';
 
 const NS_PER_SEC = 1e9;
@@ -55,7 +55,7 @@ setTimeout(() => {
 ```
 
 or you can use as polyfill:
-```
+```js
 import 'browser-hrtime';
 const NS_PER_SEC = 1e9;
 const time = process.hrtime();
@@ -76,7 +76,7 @@ add to `src/polyfills.ts`:
 *You should add @types/node to your Angular app*
 `npm i -S @types/node`
 Then in `tsconfig.json`
-```
+```json
 "angularCompilerOptions": {
     "types" : ["node"]
     ....
@@ -84,7 +84,7 @@ Then in `tsconfig.json`
 ```
 
 ## Use in browser
-```
+```html
 <!DOCTYPE html>
 <html>
 
