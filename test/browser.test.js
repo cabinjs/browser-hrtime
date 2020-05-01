@@ -1,6 +1,5 @@
 const pti = require('puppeteer-to-istanbul');
 const puppeteer = require('puppeteer');
-const path = require('path');
 
 const timeout = process.env.SLOWMO ? 30000 : 10000;
 let browser, page;
