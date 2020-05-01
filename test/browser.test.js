@@ -13,7 +13,7 @@ describe('browser', () => {
   });
 
   beforeAll(async () => {
-    await page.addScriptTag({ url: '../lib/hrtime.js', type: 'module' });
+    await page.addScriptTag({ url: 'hrtime.js', type: 'module' });
   });
   describe('process.hrtime.bigint()', () => {
     test(

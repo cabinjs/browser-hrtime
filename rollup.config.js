@@ -10,7 +10,13 @@ export default {
 			file: pkg.main,
 			format: 'umd',
 			name: 'hrtime',
+			plugins: [terser()],
 			sourcemap: true
+		},
+		{
+			file: 'test/hrtime.js',
+			format: 'umd',
+			name: 'hrtime',
 		},
 	],
     watch: {
@@ -21,7 +27,6 @@ export default {
 	],
     plugins: [
 		typescript(),
-		terser(),
 		sourceMaps()
     ]
 };

@@ -3,9 +3,11 @@
       "^.+\\.(t|j)sx?$": "ts-jest"
     },
     "testMatch": [
-        "**/test/**/*.(js|ts)"
+        "**/test/**/*.(spec|test).(js|ts)"
     ],
-    "coverageReporters": ["text", "lcov", "json", "json-summary"],
+    "collectCoverage": false,
+    "coverageDirectory": ".nyc_output",
+    "coverageReporters": ["json-summary", "lcov"],
     "preset": "jest-puppeteer",
     "verbose": true,
     "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"]
