@@ -99,7 +99,7 @@ describe('browser', () => {
           });
         });
         const actual = Math.round(result / 1000000);//-20922102
-        expect(actual).toBe(21);
+        expect(actual).toBe(-21);
       },
       timeout
     );
