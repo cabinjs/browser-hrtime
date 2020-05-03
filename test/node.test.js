@@ -1,4 +1,4 @@
-const hrtime = require('../lib/hrtime');
+const hrtime = require('./hrtime');
 // const {performance} = require('perf_hooks');
 // global.performance = performance;
 // const save = process.hrtime;

@@ -8,6 +8,7 @@
     "collectCoverage": false,
     "coverageDirectory": ".nyc_output",
     "coverageReporters": ["json-summary", "lcov"],
+    "testEnvironment": "jsdom",
     "preset": "jest-puppeteer",
     "verbose": true,
     "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"]

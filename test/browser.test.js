@@ -110,10 +110,10 @@ describe('browser', () => {
         const result = await page.evaluate(() => {
           return new Promise((resolve, reject) => {
             var time = process.hrtime(); // e.g [ 1800216, 25 ]
-            setTimeout(() => {
-              var diff = process.hrtime(time); // [ 1, 552 ]
-              resolve(Number(diff[0] * 1e9 + diff[1]));
-            }, 1000);
+            time[0] -= 1;
+            time[1] -= 552;
+            var diff = process.hrtime(time); // [ 1, 552 ]
+            resolve(Number(diff[0] * 1e9 + diff[1]));
           });
         });
         const actual = Math.round(result / 100000000);
