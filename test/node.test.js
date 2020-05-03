@@ -10,7 +10,9 @@ const hrtime = require('../lib/hrtime');
 
 // let first = hrtime();
 // first[1] += 20942101;
-// console.log(hrtime(first));
+// const diff = hrtime(first);
+// const res = Number(diff[0] * 1e9 + diff[1]);
+// console.log(res);
 describe('NodeJS', () => {
   test('hrtime === process.hrtime', async () => {
     expect(hrtime === process.hrtime).toBe(true);
