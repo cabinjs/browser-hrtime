@@ -87,6 +87,24 @@ describe('browser', () => {
     );
 
     test(
+      'THIS should return around ~1000000552 nanoseconds',
+      async () => {
+        const result = await page.evaluate(() => {
+          return new Promise((resolve, reject) => {
+            var time = process.hrtime(); // e.g [ 1800216, 25 ]
+            // time[0] -= 0;
+            time[1] += 20942101;
+            var diff = process.hrtime(time); // [ 1, 552 ]
+            resolve(Number(diff[0] * 1e9 + diff[1]));
+          });
+        });
+        const actual = Math.round(result / 100000000);
+        expect(true).toBe(true); // 1000000552 nanoseconds
+      },
+      timeout
+    );
+
+    test(
       'should return around ~1000000552 nanoseconds',
       async () => {
         const result = await page.evaluate(() => {

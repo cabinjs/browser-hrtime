@@ -27,6 +27,7 @@
   if (typeof process === 'undefined') {
       window.process = {};
   }
+
   var index = typeof process.hrtime === 'undefined' ? (window.process.hrtime = _hrtime) : process.hrtime;
 
   return index;

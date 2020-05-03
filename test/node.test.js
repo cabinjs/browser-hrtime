@@ -1,4 +1,16 @@
 const hrtime = require('../lib/hrtime');
+// const {performance} = require('perf_hooks');
+// global.performance = performance;
+// const save = process.hrtime;
+// process.hrtime = undefined;
+// window = {};
+// window.process = {};
+// const hrtime = require('./test/hrtime');
+// process.hrtime = save;
+
+// let first = hrtime();
+// first[1] += 20942101;
+// console.log(hrtime(first));
 describe('NodeJS', () => {
   test('hrtime === process.hrtime', async () => {
     expect(hrtime === process.hrtime).toBe(true);

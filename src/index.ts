@@ -7,7 +7,6 @@ const _hrtime = (previousTimestamp?: [number, number]): [number, number] => {
   if (previousTimestamp) {
     seconds = seconds - previousTimestamp[0];
     nanoseconds = nanoseconds - previousTimestamp[1];
-    // /* istanbul ignore next */
     if (nanoseconds < 0) {
       seconds--;
       nanoseconds += 1e9;
