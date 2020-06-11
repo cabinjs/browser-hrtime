@@ -5,7 +5,7 @@ describe('TypeScript NodeJS', () => {
   });
 
   test('process should be defined', async () => {
-    expect(typeof process).not.toBe('undefined');
+    expect(typeof process).not.toBe('undefined');//test commit
   });
 
   test('process.hrtime() should be a function', async () => {
