@@ -19,7 +19,7 @@ _hrtime.bigint = (time?: [number, number]): bigint => {
   const diff = _hrtime(time);
   return ((diff[0] * NS_PER_SEC + diff[1]) as unknown) as bigint;
 };
-if (typeof process.hrtime === 'undefined') {
+if ((typeof process === 'undefined' || typeof process.hrtime === 'undefined') && typeof window.process === 'undefined') {
   window.process = <any>{};
 }
 export default typeof process.hrtime === 'undefined' ? (window.process.hrtime = _hrtime) : process.hrtime;

@@ -24,7 +24,7 @@
       var diff = _hrtime(time);
       return (diff[0] * NS_PER_SEC + diff[1]);
   };
-  if (typeof process.hrtime === 'undefined') {
+  if ((typeof process === 'undefined' || typeof process.hrtime === 'undefined') && typeof window.process === 'undefined') {
       window.process = {};
   }
   var index = typeof process.hrtime === 'undefined' ? (window.process.hrtime = _hrtime) : process.hrtime;
