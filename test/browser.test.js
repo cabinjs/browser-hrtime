@@ -13,6 +13,11 @@ describe('browser', () => {
   });
 
   beforeAll(async () => {
+    await page.evaluate(() => {
+      delete window.performance;
+      Date.now = undefined;
+      return;
+    });
     await page.addScriptTag({ url: 'hrtime.js', type: 'module' });
   });
   describe('process.hrtime.bigint()', () => {
