@@ -4,7 +4,24 @@
   (global = global || self, global.hrtime = factory());
 }(this, (function () { 'use strict';
 
+  var _perfomancePolyfill = function () {
+      // based on https://gist.github.com/paulirish/5438650 copyright Paul Irish 2015
+      if ("performance" in window === false) {
+          window.performance = {};
+      }
+      Date.now = (Date.now || (function () {
+          return new Date().getTime();
+      }));
+      if ("now" in window.performance === false) {
+          var nowOffset_1 = Date.now();
+          if (performance.timing && performance.timing.navigationStart) {
+              nowOffset_1 = performance.timing.navigationStart;
+          }
+          window.performance.now = function () { return Date.now() - nowOffset_1; };
+      }
+  };
   var _hrtime = function (previousTimestamp) {
+      _perfomancePolyfill();
       var baseNow = Math.floor((Date.now() - performance.now()) * 1e-3);
       var clocktime = performance.now() * 1e-3;
       var seconds = Math.floor(clocktime) + baseNow;
