@@ -10,7 +10,6 @@
     "format": "prettier --write \"src/**/*.ts\"",
     "test": "jest && nyc report --reporter=lcov",
     "testnew": "jest && nyc merge .nyc_output .nyc_output/out.json && nyc report --reporter=lcov",
-    "coverall": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
     "lint": "tslint -p tsconfig.json",
     "release": "dotenv release-it --no-npm.publish"
   },
