@@ -3,23 +3,24 @@ browser support for `process.hrtime()`.
 
 ![Node.js CI](https://github.com/cabinjs/browser-hrtime/workflows/Node.js%20CI/badge.svg)
 [![Coverage Status](https://coveralls.io/repos/github/cabinjs/browser-hrtime/badge.svg?branch=master)](https://coveralls.io/github/cabinjs/browser-hrtime?branch=master)
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fcabinjs%2Fbrowser-hrtime.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fcabinjs%2Fbrowser-hrtime?ref=badge_shield)
+[![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+[![license](https://img.shields.io/github/license/cabinjs/parse-request.svg)](LICENSE)
 
 ## :package: Installation
 
 #### npm
 
 ```bash
-$ npm install browser-hrtime
+npm install browser-hrtime
 ```
 
 #### yarn
 
 ```bash
-$ yarn add browser-hrtime
+yarn add browser-hrtime
 ```
 
-## :page_with_curl: Example
+## :page_with_curl: Examples
 ### NodeJS
 #### As a polyfill
 ```js
@@ -33,7 +34,7 @@ setTimeout(() => {
 ```
 ### As a function
 ```js
-const hrtime = require('browser-hrtime');//if your code will 
+const hrtime = require('browser-hrtime');
 
 const time = hrtime();// [ 1800216, 25 ]
 setTimeout(() => {
@@ -69,13 +70,13 @@ setTimeout(() => {
   console.log(`Benchmark took ${diff[0] * 1e9 + diff[1]} nanoseconds`);// Benchmark took 1000000552 nanoseconds
 }, 1000);
 ```
-### usage as an Angular polyfill:
+### Usage as an Angular polyfill:
 add to `src/polyfills.ts`:
 `import 'browser-hrtime';`
 Add @types/node to your Angular app
 
 ```bash
-$ npm i -S @types/node
+npm i -S @types/node
 ```
 
 Then in `tsconfig.json`
@@ -103,34 +104,31 @@ Then in `tsconfig.json`
 see [NodeJS documenation](https://nodejs.org/api/process.html#process_process_hrtime_time) for detailed process.hrtime API
 
 
-## :octocat: Contribution
-### environment
-
-1. clone project from Github
+## Contribution
+Clone project from Github
 
 ```bash
-$ git clone git@github.com:cabinjs/browser-hrtime.git
+git clone git@github.com:cabinjs/browser-hrtime.git
 ```
 
-2. install npm packages
+Install npm packages
 
 ```bash
-$ cd browser-hrtime
-$ npm install
+cd browser-hrtime
+npm install
 ```
 
-3. build sources
+Build sources:
 
 ```bash
-$ npm run build
+npm run build
+```
+Run tests:
+
+```
+npm run test
 ```
 
-### test
+### License
 
-```bash
-$ npm run test
-```
-=======
-## :mag_right: License
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fcabinjs%2Fbrowser-hrtime.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fcabinjs%2Fbrowser-hrtime?ref=badge_large)
-
+[MIT](LICENSE)
