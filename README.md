@@ -20,7 +20,7 @@ npm install browser-hrtime
 yarn add browser-hrtime
 ```
 
-## :page_with_curl: Example
+## :page_with_curl: Examples
 ### NodeJS
 #### As a polyfill
 ```js
@@ -70,7 +70,7 @@ setTimeout(() => {
   console.log(`Benchmark took ${diff[0] * 1e9 + diff[1]} nanoseconds`);// Benchmark took 1000000552 nanoseconds
 }, 1000);
 ```
-### usage as an Angular polyfill:
+### Usage as an Angular polyfill:
 add to `src/polyfills.ts`:
 `import 'browser-hrtime';`
 Add @types/node to your Angular app
@@ -105,30 +105,27 @@ see [NodeJS documenation](https://nodejs.org/api/process.html#process_process_hr
 
 
 ## Contribution
-### environment
-
-1. clone project from Github
+Clone project from Github
 
 ```bash
 git clone git@github.com:cabinjs/browser-hrtime.git
 ```
 
-2. install npm packages
+Install npm packages
 
 ```bash
 cd browser-hrtime
 npm install
 ```
 
-3. build sources
+Build sources:
 
 ```bash
 npm run build
 ```
+Run tests:
 
-### Tests
-
-```bash
+```
 npm run test
 ```
 
