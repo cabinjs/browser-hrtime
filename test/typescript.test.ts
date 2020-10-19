@@ -1,11 +1,11 @@
-import * as hrtime from '../lib/hrtime';
+import * as hrtime from '../dist/hrtime';
 describe('TypeScript NodeJS', () => {
   test('hrtime() should be function', async () => {
     expect(typeof hrtime).not.toBe('undefined');
   });
 
   test('process should be defined', async () => {
-    expect(typeof process).not.toBe('undefined');//test commit
+    expect(typeof process).not.toBe('undefined');// test commit
   });
 
   test('process.hrtime() should be a function', async () => {
