@@ -10,7 +10,8 @@
     "format": "prettier --write \"src/**/*.ts\"",
     "test": "jest && nyc report --reporter=lcov",
     "testnew": "jest && nyc merge .nyc_output .nyc_output/out.json && nyc report --reporter=lcov",
-    "lint": "tslint -p tsconfig.json"
+    "lint": "tslint -p tsconfig.json",
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
