@@ -41,7 +41,7 @@
     "jest": "^25.5.4",
     "jest-puppeteer": "^4.4.0",
     "nyc": "^15.1.0",
-    "prettier": "^2.0.4",
+    "prettier": "^2.2.1",
     "puppeteer": "^5.5.0",
     "puppeteer-to-istanbul": "^1.4.0",
     "rollup": "^2.38.2",
