@@ -6,6 +6,8 @@ browser support for `process.hrtime()`.
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![license](https://img.shields.io/github/license/cabinjs/parse-request.svg)](LICENSE)
 
+ **880 bytes** (minified and gzipped). No dependencies.
+  [Size Limit](https://github.com/ai/size-limit) controls the size.
 ## :package: Installation
 
 #### npm
