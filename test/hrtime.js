@@ -5,7 +5,7 @@
 }(this, (function () { 'use strict';
 
   var _perfomancePolyfill = function () {
-      // based on https://gist.github.com/paulirish/5438650 copyright Paul Irish 2015
+      // based on https://gist.github.com/paulirish/5438650 copyright Paul Irish 2015.
       if ("performance" in window === false) {
           window.performance = {};
       }
