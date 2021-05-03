@@ -41,7 +41,7 @@
     "@semantic-release/changelog": "^5.0.1",
     "@semantic-release/git": "^9.0.0",
     "@size-limit/preset-small-lib": "^4.9.2",
-    "@types/jest": "^26.0.20",
+    "@types/jest": "^26.0.23",
     "@types/node": "^14.14.32",
     "coveralls": "^3.1.0",
     "dotenv-cli": "^4.0.0",
