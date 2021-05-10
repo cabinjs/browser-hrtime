@@ -50,7 +50,7 @@
     "jest-puppeteer": "^5.0.3",
     "nyc": "^15.1.0",
     "prettier": "^2.2.1",
-    "puppeteer": "^9.0.0",
+    "puppeteer": "^9.1.1",
     "puppeteer-to-istanbul": "^1.4.0",
     "rollup": "^2.46.0",
     "rollup-plugin-copy": "^3.4.0",
