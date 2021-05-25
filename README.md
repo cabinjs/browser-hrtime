@@ -9,8 +9,6 @@ browser support for `process.hrtime()`.
   [Size Limit](https://github.com/ai/size-limit) controls the size.
 ## Installation
 
-#### npm
-
 ```bash
 npm install browser-hrtime
 ```
