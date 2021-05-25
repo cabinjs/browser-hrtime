@@ -1,6 +1,6 @@
 {
   "name": "browser-hrtime",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "description": "use process.hrtime() in the browser",
   "main": "dist/hrtime.js",
   "typings": "dist/hrtime.d.ts",
